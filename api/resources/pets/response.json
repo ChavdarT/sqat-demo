@@ -1,0 +1,18 @@
+{
+  "id": "skip",
+  "category": {
+    "id": 0,
+    "name": "name"
+  },
+  "name": "${name}",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"
+    }
+  ],
+  "status": "${status}"
+}

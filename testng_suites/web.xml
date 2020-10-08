@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="1" name="Net Test - Web tests" skipfailedinvocationcounts="false" junit="false" parallel="methods" data-provider-thread-count="50" annotations="JDK">
+	<listeners>
+        	<listener class-name="com.qaprosoft.zafira.listener.ZafiraListener"/>
+	</listeners>
+
+	<parameter name="suiteOwner" value="Ivan"/>
+	<parameter name="zafira_project" value="SQAT"/>
+	<parameter name="jenkinsJobCreation" value="true"/>
+	<parameter name="jenkinsJobName" value="SQAT-Web-Test"/>
+    <parameter name="jenkinsNodeLabel" value="windows"/>
+	<parameter name="jenkinsJobType" value="web"/>
+	<parameter name="jenkinsEnvironments" value="DEV"/>
+	<parameter name="jenkinsEmail" value="ivan.dobrinov@upnetix.com"/>
+    <parameter name="testClasses" value="PetsTests"/>
+	<parameter name="jenkinsPipelineEnvironments" value="DEV"/>
+	<parameter name="jenkinsQueueRegistration" value="true"/>
+
+	<parameter name="jenkinsPipelineBrowsers" value="chrome,firefox,ie"/>
+	<parameter name="jenkinsJobExecutionOrder" value="1"/>
+	<parameter name="jenkinsJobExecutionMode" value="continue"/>
+
+	<test name="SQAT Web Tests">
+		<classes>
+			<class name="SQAT_demo.test.api.pets.PetsTests" />
+		</classes>
+	</test>
+
+</suite>
